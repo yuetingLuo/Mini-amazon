@@ -1,0 +1,14 @@
+Extra features:
+
+1. Webpage Product Listing Enhancements:
+Add a new field to the product details, containing a base64 string of the product image.
+For the order list, integrate a search bar to filter orders by order ID, and add a refresh button to update the order status.
+
+2. Shopping Cart Functionality:
+Implement a shopping cart that allows users to place multiple products and check out all at once.
+
+3. Login and Registration:
+Incorporate login and registration features on Amazon, ensuring that only the orders of the logged-in user are displayed.
+
+4. Multiple Warehouse Management:
+Operate several warehouses and assign the warehouse closest to the destination for each order to optimize delivery efficiency.

@@ -1,0 +1,23 @@
+1. Modification of Destination
+Customers should not be able to modify the destination of an order once it has been shipped.
+Proposed solution: Check the order status before allowing modifications.
+
+2. Database Concurrency Issues
+Database operations can lead to dirty reads and writes.
+Proposed solution: Set the database isolation level to serializable to improve isolation and resolve concurrency issues.
+
+3. Data Operation Failure
+There is a lack of proper error handling when database operations fail.
+Proposed solution: Roll back any transactions that fail.
+
+4. Insufficient Exception Handling:
+When errors occur in the project, they are only printed out, which may sometimes expose them to the client without an
+effective resolution mechanism.
+Proposed Solution: Implement a exception handling mechanism, which should catch and log errors internally while
+providing a generic error message to the client to prevent the exposure of sensitive details.
+
+5. Server Resource Leaks:
+Currently, we connect to UPS and the world through two sockets.
+In the event of exceptions and errors, they may not be properly closed, leading to prolonged resource consumption.
+Proposed Solution: Ensure that socket connections to UPS and other services are enclosed within a try-finally block or
+use context managers to guarantee that resources are released appropriately even in the event of an error.
