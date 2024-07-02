@@ -125,7 +125,7 @@ public class WorldSocketService {
         this.out = socket.getOutputStream();
     }
 
-    @Async
+
     public void listenToServer() {
         try {
             while (true) {
